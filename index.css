@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "NeueMontreal-Light" ; src: url(fonts/NeueMontreal/NeueMontreal-Light.otf);
+}
+@font-face {
+    font-family: "NeueMontreal-Bold" ; src: url(fonts/NeueMontreal/NeueMontreal-Regular.otf);
+}
+
+/* VARIABLE COLORS */
+:root {
+    --primary-color: #c7c7c7;
+    --second-color: #cedddd;
+    --primary-highlighted-color: #a31f0e;
+    --second-highlighted-color: rgb(151, 23, 12);
+    --backgroud-color : rgb(13,13,13);    
+}
+
+
+/* SCROLL BAR */
+::-webkit-scrollbar
+{
+	width: 2px;
+	background: none;
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--primary-color);
+	height:1px;	
+}
+
+/* GLOBALS VARIABLES */
+span.highlight{
+    color: var(--second-highlighted-color) !important;
+    display: contents!important;
+    font-size: larger;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: "NeueMontreal-Light";
+}
+
+
+body{
+    background: var(--backgroud-color);
+}
+
+.__wrapper{
+    display: none;   
+}
+
+
+/* SECTION PRELOADED */
+.__preloaded{
+    background: whitesmoke;
+    width: 100%;
+    position: relative;    
+}
+.__preloaded .page__{
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    display: table;
+}
+.__preloaded .info__{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;    
+}
+.__preloaded p{
+    font-size: x-large;
+    letter-spacing: 1px;    
+    text-align: center;
+    color: #22222b;     
+    transition: all 1s;  
+    line-height: 1.1;
+}
+.__preloaded span.highlight{
+    color: #a31f0e;    
+    text-decoration: none;
+}
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+}
+.overlay .bar{
+    height: 100%;
+    background: var(--backgroud-color);
+    width: 0%;
+    position: absolute;
+    z-index: 10;
+}
+
+@media(max-width:1000px){
+    .__preloaded p {
+        font-size: large;
+    }
+}
+@media(max-width:600px){
+    .__preloaded .page__ {
+        width: 85%;
+    }
+    .__preloaded p {
+        /* font-size: medium; */
+        text-align: justify;
+    }
+}
+
+
+
+/* MAIN */
+
+.__main  .page__{
+    width: 90%;
+    margin: 3rem auto 0;
+}
+
+.__main  .titles__{
+    position: relative;
+    overflow: hidden;
+}
+
+.__main  .titles__  h1{
+    color: var(--primary-color);    
+    letter-spacing: 1px;
+    line-height: 1.2;   
+    transform: translateY(100%); 
+    transition: all 1.5s  ease-out;
+    text-align: justify;
+}
+
+.__main  .titles__.first h1{   
+    font-size: 4rem;    
+}
+
+.__main  .titles__.middle{
+    display: flex;  
+    align-items: center;  
+    transform: translateY(-20%);  
+} 
+
+.__main  .titles__ span.line{
+    width: 0%;   
+    height: 3vh;
+    transition: all 1.2s ease-out;
+    background: var(--primary-color);
+    background: #a31f0e;
+}
+.__main  .titles__.middle .broken__{
+    position: relative;
+}
+.__main  .broken__ h1:nth-of-type(1){    
+    clip-path: polygon(0 0, 0 100%, 100% 0); 
+    font-size: 16rem; 
+}
+.__main  .broken__ h1:nth-of-type(2){ 
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    font-size: 16rem;  
+    position: absolute;
+    top: 0;    
+}
+
+.__main .titles__.last{
+    transform: translateY(-40%);
+}
+
+.__main  .titles__.last h1{    
+    font-size: 12rem;
+}
+
+
+@media(max-width:1200px){
+    .__main .page__ {        
+        margin: auto;
+        height: 100vh;
+        display: table;
+    }
+    .info__ {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .__main .broken__ h1{
+        font-size: 18rem !important;
+    }
+    .__main .titles__.last h1 {
+        font-size: 10rem !important;
+    }
+}
+
+@media(max-width:1000px){
+    .__main .titles__.first h1 {
+        font-size: 3rem !important;
+    }    
+    .__main .broken__ h1{
+        font-size: 14rem !important;
+    }
+    .__main .titles__.last h1 {
+        font-size: 8rem !important;
+    }
+}
+
+@media(max-width:800px){
+    .__main .titles__.first h1 {
+        font-size: 2.5rem !important;
+    }    
+    .__main .broken__ h1{
+        font-size: 10rem !important;
+    }
+    .__main .titles__.last h1 {
+        font-size: 5rem !important;
+    }
+}
+
+@media(max-width:600px){
+    .__main .titles__.first h1 {
+        font-size: 2rem !important;
+    } 
+    .__main .titles__ span.line {        
+        height: 1vh;
+    }   
+    .__main .broken__ h1{
+        font-size: 7rem !important;
+    }
+    .__main .titles__.last h1 {
+        font-size: 4rem !important;
+    }
+}
+
+@media(max-width:400px){
+    .__main .titles__.first h1 {
+        font-size: 1.5rem !important;
+    }    
+    .__main .broken__ h1{
+        font-size: 6rem !important;
+    }
+    .__main .titles__.last h1 {
+        font-size: 3rem !important;
+    }
+}
+
+
