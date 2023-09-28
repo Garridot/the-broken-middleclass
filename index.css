@@ -117,7 +117,7 @@ body{
 /* MAIN */
 
 .__main  .page__{
-    width: 90%;
+    width: 95%;
     margin: 3rem auto 0;
 }
 
@@ -157,11 +157,11 @@ body{
 }
 .__main  .broken__ h1:nth-of-type(1){    
     clip-path: polygon(0 0, 0 100%, 100% 0); 
-    font-size: 16rem; 
+    font-size: 15rem; 
 }
 .__main  .broken__ h1:nth-of-type(2){ 
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
-    font-size: 16rem;  
+    font-size: 15rem;  
     position: absolute;
     top: 0;    
 }
@@ -187,7 +187,7 @@ body{
         vertical-align: middle;
     }
     .__main .broken__ h1{
-        font-size: 18rem !important;
+        font-size: 14rem !important;
     }
     .__main .titles__.last h1 {
         font-size: 10rem !important;
@@ -244,5 +244,86 @@ body{
         font-size: 3rem !important;
     }
 }
+
+
+
+/* INTRO */
+
+.__intro{
+    margin: 100vh 0 0;
+}
+.__intro .page__{
+    width: 95%;
+    margin: auto;
+}
+
+.__intro .title__ h1{
+    color: var(--primary-color);
+    font-size: 3rem;  
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 10rem 0;
+    transform: translateY(100%);
+    transition: all 1.5s ease-out;
+    text-align: center;
+    font-family: "NeueMontreal-Bold";
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.__intro span{
+    overflow: hidden;
+    position: relative; 
+    display: flex; 
+    text-align: justify;
+    justify-content: end;
+}
+.__intro span:nth-of-type(2){   
+    text-align: end !important;
+}
+
+.__intro p{
+    font-size: x-large;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    line-height: 1;    
+    width: 85%;   
+    margin: 3rem 0 0; 
+    transform: translateY(100%); 
+    transition: all 1.5s ease-out;
+}
+
+@media(max-width:1000px){
+    .__intro .title__ h1{
+        font-size: 2.5rem;
+        margin: 8rem 0;
+    }
+    .__intro p{
+        font-size: x-large;        
+        width: 100%;           
+    }
+}
+@media(max-width:800px){
+    .__intro .title__ h1{
+        font-size: 2rem;
+    }    
+}
+
+@media(max-width:600px){
+    .__intro .title__ h1{
+        font-size: 1.5rem;
+        margin: 6rem 0;
+    }
+    .__intro p{
+        font-size: large; 
+    }
+}
+@media(max-width:400px){
+    .__intro .title__ h1{      
+        margin: 4rem 0;
+    }   
+}
+
+
 
 

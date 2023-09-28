@@ -1,4 +1,5 @@
 // OVERLAY EFFECT //
+
 var preloaded   = document.querySelector(".__preloaded");
 var overlay     = preloaded.querySelector(".overlay");
 
@@ -67,3 +68,34 @@ const presentationAnime = ()=>{
 }
 
 presentationAnime(); 
+
+
+
+// GLOBALS FUNTIONS //
+
+const isElementVisible = (element,threshold)=>{
+  const rect = element.getBoundingClientRect();
+  return rect.top < threshold  
+};
+
+const isPageVisible = (page) => {  
+  const shouldAnimate = isElementVisible(page, 600);
+  if (shouldAnimate) {
+    var paragraphs = page.querySelectorAll("p");
+    paragraphs.forEach((paragraph) => { isTextVisible(paragraph); });
+  } 
+};
+
+const isTextVisible = (text)=>{
+  text.style.transform = "translateY(0%)";
+}; 
+
+
+// INTRO //
+
+const intro = document.querySelector(".__intro");
+
+
+window.addEventListener("scroll",()=>{
+  if(isElementVisible(intro,700)){isPageVisible(intro)}
+})
