@@ -121,9 +121,39 @@ const chapter1Anime = ()=>{
     var paragraphs = chapter1Title.querySelectorAll("h1");
     paragraphs.forEach((paragraph) => { isTextVisible(paragraph); });
   };
-  chapter1Pages.forEach(page=>{ isPageVisible(page); })
-  
+  chapter1Pages.forEach(page=>{ isPageVisible(page); })  
 }
+
+
+// CHAPTER 2 //
+const chapter2    = document.querySelector(".__chapter__2");
+var chapter2Title = chapter2.querySelector(".title__"); 
+var chapter2Pages = chapter2.querySelectorAll(".page__");
+var chapter2Scramble = chapter2.querySelector(".text_scramble__");
+
+var chapter2Text = [`"Unlike religions or meta-narratives, technology manages to 
+bring about a civilizational change, regardless of whether one 
+believes in it or not."`];
+
+
+const chapter2Anime = ()=>{  
+  if(isElementVisible(chapter2Title,600)){
+    var paragraphs = chapter2Title.querySelectorAll("h1");
+    paragraphs.forEach((paragraph) => { isTextVisible(paragraph); });
+  };
+  chapter2Pages.forEach(page=>{ isPageVisible(page); })  
+}
+
+
+var animationTriggered = false
+let counter = 0;
+const textScramble  = (element,phrases) => {  
+  const shouldAnimate =  !animationTriggered && isElementVisible(element,800); 
+  if(shouldAnimate){     
+    new TextScramble(element.querySelector("h2"),1500).setText(phrases[counter]).then();
+    animationTriggered = true;
+  }
+};
 
 
 
@@ -158,6 +188,8 @@ window.onload = async function() {
     headlingAnime();
     chartVisible();
     chapter1Anime();
+    chapter2Anime();
+    textScramble(chapter2Scramble,chapter2Text);
   })
   
 }  

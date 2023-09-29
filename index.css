@@ -485,6 +485,7 @@ body{
     line-height: 1.2;
     font-family: "NeueMontreal-Bold";
     text-transform: uppercase;
+    transform: translateY(100%); 
     transition: all 1s ease-out;
 }
 
@@ -494,14 +495,23 @@ body{
     justify-content: end;
 }
 
+.__chapter__2 .text_scramble__ span{
+    display: contents !important;
+}
+
+.__chapter__2 .text_scramble__ .dud{
+    color: #757575;
+}
+
 .__chapter__2 .text_scramble__ h2{
-    font-size: 2rem;
+    font-size: x-large;
     color: var(--primary-color);
     letter-spacing: 1px;
     width: 60%;   
     transition: all 1.2s ease-out;
     margin: 2rem 0;
     font-weight: 100;
+    
 }
 
 .__chapter__2 .page__{
@@ -520,7 +530,7 @@ body{
     color: var(--primary-color);
     letter-spacing: 1px;  
     width: 80%;       
-    /* transform: translateY(100%);  */
+    transform: translateY(100%); 
     transition: all 1.2s ease-out;
     margin: 2rem 0;
 }
