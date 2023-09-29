@@ -469,3 +469,139 @@ body{
         margin: 1rem 0 2rem !important;
     }
 } 
+
+
+/* CHAPTER 2 */
+
+.__chapter__2{
+    width: 95%;
+    margin: 50vh auto 0;
+}
+
+.__chapter__2 .title__ h1{
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-family: "NeueMontreal-Bold";
+    text-transform: uppercase;
+    transition: all 1s ease-out;
+}
+
+.__chapter__2 .text_scramble__ {
+    margin: 30vh 0;
+    display: flex;
+    justify-content: end;
+}
+
+.__chapter__2 .text_scramble__ h2{
+    font-size: 2rem;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    width: 60%;   
+    transition: all 1.2s ease-out;
+    margin: 2rem 0;
+    font-weight: 100;
+}
+
+.__chapter__2 .page__{
+    margin: 5rem 0;
+}
+
+.__chapter__2 span{
+    position: relative;
+    overflow: hidden;    
+    display: block;
+}
+
+
+.__chapter__2  p{
+    font-size: x-large;
+    color: var(--primary-color);
+    letter-spacing: 1px;  
+    width: 80%;       
+    /* transform: translateY(100%);  */
+    transition: all 1.2s ease-out;
+    margin: 2rem 0;
+}
+
+.__chapter__2 .chart__{
+    width: 80%;    
+    height: 80vh;
+    margin: 0 0 5rem;  
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: all 1s;     
+}
+
+.__chapter__2 .chart__ p{
+    text-align: end !important;
+    font-size: smaller !important;
+    margin: 1rem 0 !important;
+    width: 100%;
+    opacity: 1 !important;   
+}
+
+
+.__chapter__2 .graph__  p{
+    margin: 3rem 0 0 !important;
+    text-align: justify;    
+}
+
+
+
+@media(max-width:1000px){
+    .__chapter__2 .title__{
+        margin: 5rem 0;
+    }
+    .__chapter__2 .title__ h1{
+        font-size: 2.5rem;       
+    }
+    .__chapter__2 .text_scramble__ h2 {
+        font-size: 1.5rem;
+    }
+    .__chapter__2 .chart__ {
+        width: 100%;
+    }
+    .__chapter__2 p {        
+        width: 100% !important;
+    }
+} 
+
+@media(max-width:800px){
+    .__chapter__2 .title__ h1{
+        font-size: 2rem;       
+    }
+    .__chapter__2 .text_scramble__ h2{
+        text-align: end;
+        width: 80%;
+    }
+}
+
+@media(max-width:600px){ 
+    .__chapter__2 .title__ h1{
+        font-size: 1.5rem;       
+    }
+    .__chapter__2 .text_scramble__ {
+        margin: 25vh 0;
+    }
+    .__chapter__2 .text_scramble__ h2{       
+        width: 100%;
+        font-size: larger;
+    }
+    
+    .__chapter__2 .page__{
+        margin: 5rem 0;
+    }   
+
+    .__chapter__2 .chart__ {
+        height: 60vh;
+    }
+    .__chapter__2 p {        
+        font-size: larger;
+        text-align: justify;
+        transform: none !important;
+    }
+    .__chapter__2 .chart__ p{
+        margin: 1rem 0 2rem !important;
+    }
+} 

@@ -1,5 +1,4 @@
 // OVERLAY EFFECT //
-
 var preloaded   = document.querySelector(".__preloaded");
 var overlay     = preloaded.querySelector(".overlay");
 
@@ -37,7 +36,6 @@ const preLoadAnime = ()=>{
 
 
 // WRAPPER
-
 var wrapper = document.querySelector(".__wrapper");
 
 const wrapperView = ()=>{  
@@ -48,7 +46,6 @@ const wrapperView = ()=>{
 
 
 // MAIN
-
 const main     = document.querySelector(".__main");
 var mainTitles = main.querySelectorAll("h1"); 
 var mainLine   = main.querySelector(".line");
@@ -136,9 +133,9 @@ window.onload = async function() {
   await createOwnershipChart();
   await createPriceHousesChart();
   await createDebtChart();
-  // await createEmploymentIndustryChart();
-  // await createGlobalManufacturingChart();
-  // await createIncomeInequalityChart();
+  await createEmploymentIndustryChart();
+  await createGlobalManufacturingChart();
+  await createIncomeInequalityChart();
 
   var graphList = [identificationChart,ownershipChart,priceHousesChart,debtBalanceChart,debtChangeChart,employmentIndustryChart,globalManufacturingChart,incomeInequalityChart]; 
   var animationTriggered = Array(graphs.length).fill(false);
