@@ -327,3 +327,145 @@ body{
 
 
 
+
+.headling__ {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0 0; 
+    z-index: 1;
+    background: var(--backgroud-color);     
+}
+.headling__ p{
+    font-size: smaller !important;
+    letter-spacing: 1px !important;
+    color: var(--primary-color);
+    padding: 1rem 0;
+    text-transform: uppercase;
+    margin: 0 auto 1rem !important;    
+    display: flex;
+    align-items: center;    
+    transition: all 1s;  
+    width: 100% !important; 
+}
+
+.headling__  span{
+    height: 1px;
+    display: block;
+    width: 0%;
+    margin: 0 1rem;
+    background: #BA3737;
+    transition: all 1s; 
+}
+
+
+@media(max-width:600px){
+    .headling__ p{
+        font-size: small !important;
+    }    
+}
+
+/* CHAPTER 1 */
+
+.__chapter__1{
+    width: 95%;
+    margin: 100vh auto 0;
+}
+
+.__chapter__1 .title__ span{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.__chapter__1 .title__ h1{
+    color: var(--primary-color);
+    font-size: 5rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-family: "NeueMontreal-Bold";
+    text-transform: uppercase;
+    transform: translateY(100%);   
+    transition: all 1s ease-out;
+    text-align: end;
+}
+
+.__chapter__1 .page__{
+    margin: 10rem 0;
+}
+
+.__chapter__1 span{
+    position: relative;
+    overflow: hidden;    
+    display: block;
+}
+
+.__chapter__1 p{
+    font-size: x-large;
+    color: var(--primary-color);
+    letter-spacing: 1px;  
+    width: 80%;       
+    transform: translateY(100%); 
+    transition: all 1.2s ease-out;
+    margin: 2rem 0;
+}
+.__chapter__1 .chart__{
+    width: 80%;
+    height: 80vh;
+    margin: 0 0 2rem;  
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: all 1s;  
+}
+.__chapter__1 .chart__ p{
+    text-align: end !important;
+    font-size: smaller !important;
+    margin: 1rem 0 !important;
+    width: 100%;
+    opacity: 1 !important;
+}
+
+.__chapter__1 .graph__  p{
+    margin: 3rem 0 0 !important;
+    text-align: justify;    
+}
+
+@media(max-width:1000px){
+    .__chapter__1 .title__{
+        margin: 5rem 0;
+    }
+    .__chapter__1 .title__ h1{
+        font-size: 3rem;       
+    }
+    .__chapter__1 .chart__ {
+        width: 100%;
+    }
+    .__chapter__1 p {        
+        width: 100%;
+    }
+} 
+
+@media(max-width:800px){
+    .__chapter__1 .title__ h1{
+        font-size: 2.5rem;       
+    }
+}
+
+@media(max-width:600px){ 
+    .__chapter__1 .title__ h1{
+        font-size: 2rem;       
+    }
+    .__chapter__1 .page__{
+        margin: 5rem 0;
+    }   
+    .__chapter__1 .chart__ {
+        height: 60vh;
+    }
+    .__chapter__1 p {        
+        font-size: larger;
+        text-align: justify;
+        transform: none !important;
+    }
+    .__chapter__1 .chart__ p{
+        margin: 1rem 0 2rem !important;
+    }
+} 

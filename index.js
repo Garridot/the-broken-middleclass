@@ -86,16 +86,81 @@ const isPageVisible = (page) => {
   } 
 };
 
+const isGraphVisible = (graph)=>{
+  graph.style.clipPath= "polygon(0 0, 100% 0, 100% 200%, 0 100%)";
+}
+
 const isTextVisible = (text)=>{
   text.style.transform = "translateY(0%)";
 }; 
 
 
-// INTRO //
 
+// GRAPHS //
+var graphs = document.querySelectorAll(".graph__");
+
+// HEADLING //
+var headlings = document.querySelectorAll(".headling__");
+
+const headlingAnime = ()=>{
+  
+  headlings.forEach(headling=>{  
+    isPageVisible(headling);  
+    if(isElementVisible(headling,200)){ headling.querySelector("span").style.width = "2%"; }; 
+  })  
+}
+
+// INTRO //
 const intro = document.querySelector(".__intro");
 
 
-window.addEventListener("scroll",()=>{
-  if(isElementVisible(intro,700)){isPageVisible(intro)}
-})
+// CHAPTER 1 //
+const chapter1    = document.querySelector(".__chapter__1");
+var chapter1Title = chapter1.querySelector(".title__"); 
+var chapter1Pages = chapter1.querySelectorAll(".page__");
+
+const chapter1Anime = ()=>{  
+  if(isElementVisible(chapter1Title,600)){
+    var paragraphs = chapter1Title.querySelectorAll("h1");
+    paragraphs.forEach((paragraph) => { isTextVisible(paragraph); });
+  };
+  chapter1Pages.forEach(page=>{ isPageVisible(page); })
+  
+}
+
+
+
+window.onload = async function() {
+  // Call the async function  
+  await createIdentificationChart();
+  await createOwnershipChart();
+  await createPriceHousesChart();
+  await createDebtChart();
+  // await createEmploymentIndustryChart();
+  // await createGlobalManufacturingChart();
+  // await createIncomeInequalityChart();
+
+  var graphList = [identificationChart,ownershipChart,priceHousesChart,debtBalanceChart,debtChangeChart,employmentIndustryChart,globalManufacturingChart,incomeInequalityChart]; 
+  var animationTriggered = Array(graphs.length).fill(false);
+
+
+
+  const chartVisible = () => {    
+    graphs.forEach((graph, index) => {   
+      const shouldAnimate = !animationTriggered[index] && isElementVisible(graph, 600); 
+      if (shouldAnimate) {
+        isGraphVisible(graph.querySelector(".chart__"));
+        graphList[index].requestAnimationFrame();
+        animationTriggered[index] = true;
+      }
+    });
+  };
+
+  window.addEventListener("scroll",()=>{
+    if( isElementVisible(intro,700) ){ isPageVisible(intro); }
+    headlingAnime();
+    chartVisible();
+    chapter1Anime();
+  })
+  
+}  
