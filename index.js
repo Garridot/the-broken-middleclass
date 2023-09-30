@@ -45,6 +45,14 @@ const wrapperView = ()=>{
 }
 
 
+// HEADER //
+const barMenu = document.querySelector(".bar-menu");
+barMenu.addEventListener("click",()=>{
+  barMenu.querySelector(".icon-menu").classList.toggle("cancel");
+  document.querySelector("nav").classList.toggle("showed");
+})
+
+
 // MAIN
 const main     = document.querySelector(".__main");
 var mainTitles = main.querySelectorAll("h1"); 
