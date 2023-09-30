@@ -10,6 +10,10 @@
     font-family: "NeueMontreal-Bold" ; src: url(fonts/NeueMontreal/NeueMontreal-Regular.otf);
 }
 
+@font-face{
+    font-family: "NeueMontreal-Italic"; src: url(fonts/NeueMontreal/NeueMontreal-Bold.otf);
+}
+
 /* VARIABLE COLORS */
 :root {
     --primary-color: #c7c7c7;
@@ -551,12 +555,34 @@ body{
     opacity: 1 !important;   
 }
 
-
 .__chapter__2 .graph__  p{
     margin: 3rem 0 0 !important;
     text-align: justify;    
 }
 
+
+.__chapter__2 .img_transition__{
+    position: relative;    
+}
+.__chapter__2 .img_transition__ .img__{
+    display: flex;
+    justify-content: end;
+    height: 70vh;
+}
+
+.__chapter__2 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.__chapter__2 .img_transition__ h5{
+    font-size: smaller;    
+    padding: 1rem 0 0;     
+    letter-spacing: 1px;
+    text-align: end;
+    color: var(--primary-color);
+    font-weight: 100;
+} 
 
 
 @media(max-width:1000px){
@@ -584,6 +610,9 @@ body{
     .__chapter__2 .text_scramble__ h2{
         text-align: end;
         width: 80%;
+    }
+    .__chapter__2 .img_transition__ .img__{
+        height: auto;
     }
 }
 
