@@ -14,6 +14,13 @@
     font-family: "NeueMontreal-Italic"; src: url(fonts/NeueMontreal/NeueMontreal-Bold.otf);
 }
 
+@font-face {
+    font-family: "GoshaSans-Bold" ; src: url(fonts/GoshaSans/GoshaSans-Bold.otf);
+}
+@font-face {
+    font-family: "GoshaSans-Regular" ; src: url(fonts/GoshaSans/GoshaSans-Regular.otf);
+}
+
 /* VARIABLE COLORS */
 :root {
     --primary-color: #c7c7c7;
@@ -39,8 +46,7 @@
 /* GLOBALS VARIABLES */
 span.highlight{
     color: var(--second-highlighted-color) !important;
-    display: contents!important;
-    font-size: larger;
+    
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -328,12 +334,63 @@ nav.showed{
 }
 
 
+/* WALL */
+
+.wall__{
+    margin: 100vh 0 0;
+}
+.wall__{
+    width: 100%;
+    overflow: hidden;
+}
+
+.wall__ p{
+    font-size: 6vw;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "GoshaSans-Regular";     
+    white-space: nowrap;  
+    color: var(--second-color);
+    line-height:.8;
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);  
+    will-change: clip-path; 
+    transition-duration: 2s; 
+}
+
+.wall__ .divider{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 0;    
+} 
+
+.wall__ .divider span{
+    height: 1px;
+    width: 0%;
+    background: var(--primary-color);
+    transition: all 3s ease-out;
+}
+
+@media(max-width:1000px){
+    .wall__ p {
+        font-size: 4rem;
+    }
+    .wall__ .divider span{        
+        transition: all 2s ease-out;
+    }
+}
+@media(max-width:600px){    
+    .wall__ .divider span{        
+        transition: all 1s ease-out;
+    }
+}
+@media(max-width:400px){
+    .wall__ p {
+        font-size: 3rem;
+    }
+}
 
 /* INTRO */
 
-.__intro{
-    margin: 100vh 0 0;
-}
 .__intro .page__{
     width: 95%;
     margin: auto;

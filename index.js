@@ -100,6 +100,25 @@ const isTextVisible = (text)=>{
 }; 
 
 
+// WALL //
+
+const wall = document.querySelector(".wall__");
+var wallText = wall.querySelectorAll("p");
+var wallDivider = wall.querySelector(".divider span");
+
+
+const wallAnime = ()=>{
+  var isvisible = isElementVisible(wall,600);
+
+  if(isvisible){
+    wallText.forEach(i=>{
+      i.style.clipPath= "polygon(0 0, 100% 0%, 100% 100%, 0 100%)";
+      i.style.transitionDelay  = (i/10)  + "s";  
+    });
+    wallDivider.style.width = "100%";
+  }   
+} 
+
 
 // GRAPHS //
 var graphs = document.querySelectorAll(".graph__");
@@ -193,7 +212,8 @@ window.onload = async function() {
 
   window.addEventListener("scroll",()=>{
     if( isElementVisible(intro,700) ){ isPageVisible(intro); }
-    headlingAnime();
+    wallAnime();
+    headlingAnime();    
     chartVisible();
     chapter1Anime();
     chapter2Anime();
