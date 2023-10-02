@@ -172,6 +172,21 @@ const chapter2Anime = ()=>{
 }
 
 
+// CHAPTER 4 //
+const chapter4    = document.querySelector(".__chapter__4");
+var chapter4Title = chapter4.querySelector(".title__"); 
+var chapter4Pages = chapter4.querySelectorAll(".page__");
+
+const chapter4Anime = ()=>{  
+  if(isElementVisible(chapter4Title,600)){
+    var paragraphs = chapter4Title.querySelectorAll("h1");
+    paragraphs.forEach((paragraph) => { isTextVisible(paragraph); });
+  };
+  chapter4Pages.forEach(page=>{ isPageVisible(page); })  
+}
+
+
+
 var animationTriggered = false
 let counter = 0;
 const textScramble  = (element,phrases) => {  
@@ -217,6 +232,7 @@ window.onload = async function() {
     chartVisible();
     chapter1Anime();
     chapter2Anime();
+    chapter4Anime();
     textScramble(chapter2Scramble,chapter2Text);
   })
   

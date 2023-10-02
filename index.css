@@ -350,7 +350,7 @@ nav.showed{
     text-transform: uppercase;
     font-family: "GoshaSans-Regular";     
     white-space: nowrap;  
-    color: var(--second-color);
+    color: var(--primary-color);
     line-height:.8;
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);  
     will-change: clip-path; 
@@ -778,4 +778,76 @@ nav.showed{
     .__chapter__2 .chart__ p{
         margin: 1rem 0 2rem !important;
     }
+} 
+
+
+/* CHAPTER 4 */
+
+.__chapter__4{
+    width: 95%;
+    margin: 50vh auto 0;
+}
+
+.__chapter__4 .title__ h1{
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-family: "NeueMontreal-Bold";
+    text-transform: uppercase;
+    transform: translateY(100%); 
+    transition: all 1s ease-out;
+}
+
+.__chapter__4 .page__{
+    margin: 5rem 0;
+}
+
+.__chapter__4 span{
+    position: relative;
+    overflow: hidden;    
+    display: block;
+}
+
+
+.__chapter__4  p{
+    font-size: x-large;
+    color: var(--primary-color);
+    letter-spacing: 1px;  
+    width: 80%;       
+    transform: translateY(100%); 
+    transition: all 1.2s ease-out;
+    margin: 2rem 0;
+}
+
+
+@media(max-width:1000px){
+    .__chapter__4 .title__{
+        margin: 5rem 0;
+    }
+    .__chapter__4 .title__ h1{
+        font-size: 2.5rem;       
+    }    
+    .__chapter__4 p {        
+        width: 100% !important;
+    }
+} 
+
+@media(max-width:800px){
+    .__chapter__4 .title__ h1{
+        font-size: 2rem;       
+    }   
+}
+
+@media(max-width:600px){ 
+    .__chapter__4 .page__{
+        margin: 5rem 0;
+    } 
+   
+    .__chapter__4 p {        
+        font-size: larger;
+        text-align: justify;
+        transform: none !important;
+    }
+    
 } 
