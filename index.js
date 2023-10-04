@@ -169,6 +169,7 @@ const chapter2Anime = ()=>{
     paragraphs.forEach((paragraph) => { isTextVisible(paragraph); });
   };
   chapter2Pages.forEach(page=>{ isPageVisible(page); })  
+  textScramble(chapter2Scramble.querySelector("h2"),chapter2Text);    
 }
 
 
@@ -176,13 +177,31 @@ const chapter2Anime = ()=>{
 const chapter4    = document.querySelector(".__chapter__4");
 var chapter4Title = chapter4.querySelector(".title__"); 
 var chapter4Pages = chapter4.querySelectorAll(".page__");
+// var chapter4Banner = document.querySelector(".banner__");
+var chapter4Transition = chapter4.querySelector(".transition__");
+
 
 const chapter4Anime = ()=>{  
-  if(isElementVisible(chapter4Title,600)){
+  var titleVisible  = isElementVisible(chapter4Title,600);
+  // var bannerVisible = isElementVisible(chapter4Banner,400);
+  var transiVisible = isElementVisible(chapter4Transition,500);
+
+  chapter4Pages.forEach(page=>{isPageVisible(page);})  
+
+  if(titleVisible){
     var paragraphs = chapter4Title.querySelectorAll("h1");
     paragraphs.forEach((paragraph) => { isTextVisible(paragraph); });
-  };
-  chapter4Pages.forEach(page=>{ isPageVisible(page); })  
+  };  
+  // if(bannerVisible){
+  //   var imagenes = chapter4Banner.querySelectorAll(".img__");
+  //   imagenes[0].style.clipPath = "polygon(0 0, 48% 0, 48% 100%, 0% 100%)"; 
+  //   imagenes[1].style.clipPath = "polygon(50% 0, 100% 0, 100% 100%, 50% 100%)";        
+  // };
+  if(transiVisible){
+    var img  = chapter4Transition.querySelector(".img__");   
+    img.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";    
+  } 
+  
 }
 
 
@@ -192,7 +211,7 @@ let counter = 0;
 const textScramble  = (element,phrases) => {  
   const shouldAnimate =  !animationTriggered && isElementVisible(element,800); 
   if(shouldAnimate){     
-    new TextScramble(element.querySelector("h2"),1500).setText(phrases[counter]).then();
+    new TextScramble(element,1500).setText(phrases[counter]).then();
     animationTriggered = true;
   }
 };
@@ -232,8 +251,7 @@ window.onload = async function() {
     chartVisible();
     chapter1Anime();
     chapter2Anime();
-    chapter4Anime();
-    textScramble(chapter2Scramble,chapter2Text);
+    chapter4Anime();    
   })
   
 }  

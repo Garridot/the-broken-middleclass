@@ -800,7 +800,45 @@ nav.showed{
 }
 
 .__chapter__4 .page__{
+    margin: 10rem 0 0;
+}
+.__chapter__4 .page__:nth-last-of-type(1){
     margin: 5rem 0;
+}
+
+.__chapter__4 .__grain{
+    overflow: hidden !important;
+}
+
+.__chapter__4 .transition__{
+    display: flex;
+    justify-content: end;
+    margin: 5rem 0 0;
+    width: 100%;
+}
+.__chapter__4 .transition__ span{
+    width: 60%;
+}
+
+.__chapter__4 .transition__ .img__{    
+    width: 100%;     
+    overflow: hidden;
+    position: relative;    
+    transition: all 1.5s ease-out; 
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.__chapter__4 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.__chapter__4 .transition__ p{
+    font-size: larger;
+    margin: 1rem 0;
+    transform: none;
+    width: 100%;    
+    text-align: justify;
 }
 
 .__chapter__4 span{
@@ -808,7 +846,6 @@ nav.showed{
     overflow: hidden;    
     display: block;
 }
-
 
 .__chapter__4  p{
     font-size: x-large;
@@ -820,14 +857,17 @@ nav.showed{
     margin: 2rem 0;
 }
 
-
 @media(max-width:1000px){
     .__chapter__4 .title__{
         margin: 5rem 0;
     }
     .__chapter__4 .title__ h1{
         font-size: 2.5rem;       
-    }    
+    }
+    .__chapter__4 .transition__ span{
+        width: 100%;
+    }
+     
     .__chapter__4 p {        
         width: 100% !important;
     }
@@ -841,9 +881,11 @@ nav.showed{
 
 @media(max-width:600px){ 
     .__chapter__4 .page__{
-        margin: 5rem 0;
-    } 
-   
+        margin: 2rem 0 !important;    
+    }
+    .__chapter__4 .transition__ {
+        margin: 2rem 0 0;
+    }     
     .__chapter__4 p {        
         font-size: larger;
         text-align: justify;
