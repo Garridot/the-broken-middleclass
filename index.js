@@ -97,6 +97,7 @@ const isGraphVisible = (graph)=>{
 
 const isTextVisible = (text)=>{
   text.style.transform = "translateY(0%)";
+  text.style.opacity = "1";
 }; 
 
 

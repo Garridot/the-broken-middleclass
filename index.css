@@ -218,7 +218,7 @@ nav.showed{
     color: var(--primary-color);    
     letter-spacing: 1px;
     line-height: 1.2;   
-    transform: translateY(100%); 
+    transform: translateY(100%);   
     transition: all 1.5s  ease-out;
     text-align: justify;
 }
@@ -429,6 +429,7 @@ nav.showed{
     width: 85%;   
     margin: 3rem 0 0; 
     transform: translateY(100%); 
+    opacity: 0;
     transition: all 1.5s ease-out;
 }
 
@@ -525,6 +526,7 @@ nav.showed{
     font-family: "NeueMontreal-Bold";
     text-transform: uppercase;
     transform: translateY(100%);   
+    opacity: 0;
     transition: all 1s ease-out;
     text-align: end;
 }
@@ -545,6 +547,7 @@ nav.showed{
     letter-spacing: 1px;  
     width: 80%;       
     transform: translateY(100%); 
+    opacity: 0;
     transition: all 1.2s ease-out;
     margin: 2rem 0;
 }
@@ -625,6 +628,7 @@ nav.showed{
     font-family: "NeueMontreal-Bold";
     text-transform: uppercase;
     transform: translateY(100%); 
+    opacity: 0;
     transition: all 1s ease-out;
 }
 
@@ -670,6 +674,7 @@ nav.showed{
     letter-spacing: 1px;  
     width: 80%;       
     transform: translateY(100%); 
+    opacity: 0;
     transition: all 1.2s ease-out;
     margin: 2rem 0;
 }
@@ -795,7 +800,8 @@ nav.showed{
     line-height: 1.2;
     font-family: "NeueMontreal-Bold";
     text-transform: uppercase;
-    transform: translateY(100%); 
+    transform: translateY(100%);
+    opacity: 0; 
     transition: all 1s ease-out;
 }
 
@@ -838,7 +844,8 @@ nav.showed{
     margin: 1rem 0;
     transform: none;
     width: 100%;    
-    text-align: justify;
+    text-align: justify;    
+    opacity: 1 !important;
 }
 
 .__chapter__4 span{
@@ -852,7 +859,8 @@ nav.showed{
     color: var(--primary-color);
     letter-spacing: 1px;  
     width: 80%;       
-    transform: translateY(100%); 
+    transform: translateY(100%);     
+    opacity: 0;
     transition: all 1.2s ease-out;
     margin: 2rem 0;
 }
